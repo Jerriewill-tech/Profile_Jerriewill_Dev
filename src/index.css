@@ -1,0 +1,349 @@
+
+/* Global defaults
+   - box-sizing set to border-box for predictable sizing
+   - set a readable default font-family
+   - enable smooth scrolling for anchor navigation
+*/
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Page background + sizing
+   - crimson background color for brand/theme
+   - tall page height to allow scrolling sections
+*/
+body{
+    background: radial-gradient(); /* placeholder if a gradient is added later */
+    background-color: crimson;
+    margin: 0;
+    height: 300vh; /* ensures long scrolling page */
+}
+
+/* Page header styles
+   - orange header with subtle shadow and padding
+*/
+header{
+    background-color: orange;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 0; /* no effect unless header is positioned */
+}
+
+/* Main navigation container
+   - use flexbox to space items horizontally
+*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+/* Logo styles
+   - large, bold left-aligned site identity
+*/
+.logo{
+    font-size: 2rem;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    border: 4px solid crimson;
+    border-bottom-left-radius: 90px;
+    border-top-right-radius: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: cornflowerblue;
+    background-origin: padding-box;
+}
+.logo:hover{
+    background-color: transparent;
+    border: 4px solid crimson;
+    cursor:auto;
+}
+
+/* Navigation list items
+   - remove default bullets, display inline, add spacing and rounded clickable areas
+*/
+nav li{
+    list-style-type: none;
+    display: inline;
+    margin: 0 15px; 
+    padding:0;
+    border-radius: 25px;
+}
+
+/* Hover styles (commented out) — optional interactive state*/
+nav li:hover{
+    font-weight: bold;
+    transition: 0.5s ease-in;
+}
+
+
+/* Navigation list container
+   - remove default padding/margin and set consistent gap between items
+*/
+nav ul{
+    padding: 0; 
+    margin: 0;
+    gap: 20px;
+}
+
+/* Link styling for nav items
+   - remove underline and set readable color
+*/
+nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Generic container for page content
+   - consistent spacing around sections/components
+*/
+.container{
+     margin: 10px;
+     padding: 10px;
+}
+
+/* Section layout
+   - make each section nearly full viewport height for clear separation
+*/
+section{
+    height: 100vh;
+    width: 100%;
+    list-style-type: disc;
+}
+
+/* Section headings
+   - large, centered, and themed color
+*/
+section h2{
+    font-size: 2rem;
+    color: orange;
+    text-align: center;
+}
+
+/* Footer area
+   - orange footer with vertical layout for small screens
+*/
+footer{
+    background-color: orange;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Small footer credit text
+*/
+.designed-by{
+    font-size: 0.9rem;
+    color: black;
+    margin: 5px 0;
+}
+
+/* Social media container spacing
+*/
+.social-media{
+    margin: 10px 0;
+}
+
+/* Social links styling
+   - add spacing and remove underlines
+*/
+.social-media a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Social icons sizing and spacing
+*/
+.social-media img{
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+}
+
+/* Main content typography
+   - serif font for body text and comfortable line-height for readability
+*/
+.content{
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+/* Primary button styling
+   - orange background, white text, rounded corners, and pointer cursor
+*/
+.btn{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* Button hover state
+   - slight color change and smooth transition
+*/
+.btn:hover{
+    background-color: darkorange;
+    transition: 0.5s ease-in;
+}
+
+/* Card component styling
+   - subtle shadow, rounded corners, background color and spacing
+*/
+.card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    margin: 10px;
+    width: 100%;
+    /* stronger shadow for emphasis */
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: ease-out 0.5s;
+    overflow: hidden;
+}
+
+/* Avatar / image inside card
+   - fixed size, circular border and object-fit to cover the box
+*/
+.card img{
+    width: 160px;
+    height: 160px;
+    border: 5px solid orange;
+    border-radius: 90px;
+    object-fit: cover;
+}
+
+.p{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.p img{
+    width: 160px;
+    height: 160px;
+    border: 5px solid orange;
+    border-radius: 90px;
+    object-fit: cover;
+}
+
+/* Marquee or highlight bar style
+   - larger bold text on chocolate background
+*/
+.marquee{
+    font-size: 1.5rem;
+    color: orange;
+    font-weight: bold;
+    background-color: chocolate;
+}
+
+/* Back-to-top fixed button
+   - fixed at bottom-right for easy access to top of page
+*/
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: cornflowerblue;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    line-height: normal;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* Links inside back-to-top element
+   - remove underline and set link color
+*/
+.back-to-top a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Hover state for back-to-top
+   - make it stand out on hover
+*/
+.back-to-top:hover{
+    background-color: orange;
+    transition: 0.5s ease-in;
+}
+
+/* Headings font override
+   - use a bold display font for all headings
+*/
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+/* Table layout and colors
+   - full width table with collapsed borders; consistent cell padding
+*/
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Table cells and headings spacing
+   - padding for readability and left-aligned text
+*/
+.table, .table th, .table td{
+    /*border: 1px solid black;*/
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table header styling to match theme
+*/
+.table thead{
+    background-color: darkorange;
+    color: black;
+}
+
+/* Alternate row background for readability
+*/
+.table tr:nth-child(odd){
+    background-color: darkorange;
+}
+
+/* Table background theme
+*/
+.table {
+    background-color: chocolate;
+}
+.table li{
+    list-style-type: square;
+}
+.table a{
+    color: black;
+    text-decoration: none;
+}
+.table p{
+    font-family: cursive;
+    font-kerning: inherit;
+}
+
+hr{
+    border: 4px solid orange;
+    margin: 20px 0;
+}
+.design{
+
+    border-radius: 90;
+}
